@@ -1,0 +1,8 @@
+2025-03-15 12:55:49,625 - INFO - Verifying vector store with ID: vs_67d56a3b04308191870e3b04a5813401
+2025-03-15 12:55:49,625 - INFO - Fetching files in the vector store...
+2025-03-15 12:55:49,626 - INFO - Fetching page 1 of vector store files...
+2025-03-15 12:55:50,029 - INFO - HTTP Request: GET https://api.openai.com/v1/vector_stores/vs_67d56a3b04308191870e3b04a5813401/files?limit=100 "HTTP/1.1 200 OK"
+2025-03-15 12:55:50,038 - INFO - Summary: Vector store ID: vs_67d56a3b04308191870e3b04a5813401, Files in vector store: 0, Local markdown files: 167
+2025-03-15 12:55:50,038 - WARNING - Mismatch: 167 local files, but 0 files in vector store
+2025-03-15 12:55:50,317 - INFO - HTTP Request: GET https://api.openai.com/v1/files "HTTP/1.1 200 OK"
+2025-03-15 12:55:50,829 - INFO - HTTP Request: GET https://api.openai.com/v1/files "HTTP/1.1 200 OK"

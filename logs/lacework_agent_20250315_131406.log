@@ -1,0 +1,23 @@
+2025-03-15 13:14:06,720 - INFO - Using vector store with ID: vs_67d56a3b04308191870e3b04a5813401
+2025-03-15 13:14:06,720 - INFO - Sending prompt to OpenAI: What is the Lacework CLI and what can I do with it?
+2025-03-15 13:14:07,004 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 400 Bad Request"
+2025-03-15 13:14:07,005 - ERROR - Error processing prompt: Error code: 400 - {'error': {'message': "Missing required parameter: 'tools[0].vector_store_ids'.", 'type': 'invalid_request_error', 'param': 'tools[0].vector_store_ids', 'code': 'missing_required_parameter'}}
+Traceback (most recent call last):
+  File "/Users/xxradar/Dropbox/dev/dev_python/lw_documents/lacework_agent.py", line 1055, in ask_prompt
+    stream = client.responses.create(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/openai/_utils/_utils.py", line 279, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/openai/resources/responses/responses.py", line 602, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/openai/_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/openai/_base_client.py", line 919, in request
+    return self._request(
+           ^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/openai/_base_client.py", line 1023, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Missing required parameter: 'tools[0].vector_store_ids'.", 'type': 'invalid_request_error', 'param': 'tools[0].vector_store_ids', 'code': 'missing_required_parameter'}}

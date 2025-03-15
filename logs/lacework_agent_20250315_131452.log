@@ -1,0 +1,11 @@
+2025-03-15 13:14:52,785 - INFO - Using vector store with ID: vs_67d56a3b04308191870e3b04a5813401
+2025-03-15 13:14:52,785 - INFO - Sending prompt to OpenAI: What is the Lacework CLI and what can I do with it?
+2025-03-15 13:14:53,602 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 13:14:53,675 - ERROR - Error processing prompt: 'ChatCompletionChunk' object has no attribute 'type'
+Traceback (most recent call last):
+  File "/Users/xxradar/Dropbox/dev/dev_python/lw_documents/lacework_agent.py", line 1081, in ask_prompt
+    logging.debug(f"Received event type: {event.type}")
+                                          ^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pydantic/main.py", line 891, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'ChatCompletionChunk' object has no attribute 'type'

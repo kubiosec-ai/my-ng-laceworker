@@ -1,0 +1,3 @@
+2025-03-15 13:19:45,327 - INFO - Using vector store with ID: vs_67d56a3b04308191870e3b04a5813401
+2025-03-15 13:19:45,327 - INFO - Sending prompt to OpenAI: Describe me the latest alert
+2025-03-15 13:19:50,915 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"

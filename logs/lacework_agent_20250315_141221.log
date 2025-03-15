@@ -1,0 +1,14 @@
+2025-03-15 14:12:21,103 - INFO - Using vector store with ID: vs_67d56a3b04308191870e3b04a5813401
+2025-03-15 14:12:21,103 - INFO - Searching for relevant information for task: show me all machines.  use --json to avoid parsing errors. Make sure I have human friendly markdown block with complete command 
+2025-03-15 14:12:25,797 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-03-15 14:12:25,818 - INFO - Found relevant information: To show all machines using the Lacework CLI and output the results in JSON format, you can use the following command:
+
+```bash
+lacework api post /api/v2/Entities/Machines/search -d "{}" --json
+```
+
+This command requests a JSON response of all machines within the given time window.
+
+2025-03-15 14:12:25,818 - INFO - Generating bash commands for task: show me all machines.  use --json to avoid parsing errors. Make sure I have human friendly markdown block with complete command 
+2025-03-15 14:12:27,122 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 14:12:27,130 - INFO - Trace saved to traces/agent_run_20250315_141221.json

@@ -1,0 +1,16 @@
+2025-03-15 12:53:30,323 - INFO - Found vector store ID in config: vs_67d567ace5a081919864f70277ffce37. Verifying it exists...
+2025-03-15 12:53:30,750 - INFO - HTTP Request: GET https://api.openai.com/v1/vector_stores/vs_67d567ace5a081919864f70277ffce37/files?limit=1 "HTTP/1.1 404 Not Found"
+2025-03-15 12:53:30,753 - ERROR - Vector store with ID vs_67d567ace5a081919864f70277ffce37 not found or not accessible: Error code: 404 - {'error': {'message': "No vector store found with id 'vs_67d567ace5a081919864f70277ffce37'.", 'type': 'invalid_request_error', 'param': None, 'code': None}}
+2025-03-15 12:53:31,086 - INFO - HTTP Request: POST https://api.openai.com/v1/vector_stores "HTTP/1.1 200 OK"
+2025-03-15 12:53:31,087 - INFO - Saved vector store ID vs_67d56a3b04308191870e3b04a5813401 to lacework_vector_store_config.json
+2025-03-15 12:53:31,088 - INFO - Found 167 lacework markdown files to attach
+2025-03-15 12:53:31,364 - INFO - HTTP Request: GET https://api.openai.com/v1/files "HTTP/1.1 200 OK"
+2025-03-15 12:53:31,602 - INFO - All lacework files are already uploaded to OpenAI
+2025-03-15 12:53:31,602 - INFO - Verifying vector store with ID: vs_67d56a3b04308191870e3b04a5813401
+2025-03-15 12:53:31,602 - INFO - Fetching files in the vector store...
+2025-03-15 12:53:31,602 - INFO - Fetching page 1 of vector store files...
+2025-03-15 12:53:31,856 - INFO - HTTP Request: GET https://api.openai.com/v1/vector_stores/vs_67d56a3b04308191870e3b04a5813401/files?limit=100 "HTTP/1.1 200 OK"
+2025-03-15 12:53:31,857 - INFO - Summary: Vector store ID: vs_67d56a3b04308191870e3b04a5813401, Files in vector store: 0, Local markdown files: 167
+2025-03-15 12:53:31,858 - WARNING - Mismatch: 167 local files, but 0 files in vector store
+2025-03-15 12:53:32,146 - INFO - HTTP Request: GET https://api.openai.com/v1/files "HTTP/1.1 200 OK"
+2025-03-15 12:53:32,537 - INFO - HTTP Request: GET https://api.openai.com/v1/files "HTTP/1.1 200 OK"

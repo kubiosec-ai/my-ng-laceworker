@@ -1,0 +1,13 @@
+2025-03-15 14:05:06,335 - INFO - Using vector store with ID: vs_67d56a3b04308191870e3b04a5813401
+2025-03-15 14:05:06,335 - INFO - Running agent with OpenAI Agents SDK for task: List all Lacework agents and show their status
+2025-03-15 14:05:06,335 - ERROR - Error running agent with SDK: Cannot instantiate typing.Union
+Traceback (most recent call last):
+  File "/Users/xxradar/Dropbox/dev/dev_python/lw_documents/lacework_agent.py", line 1344, in run_agent_with_sdk
+    vector_search_tool = Tool(
+                         ^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/typing.py", line 1268, in __call__
+    result = self.__origin__(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/typing.py", line 465, in __call__
+    raise TypeError(f"Cannot instantiate {self!r}")
+TypeError: Cannot instantiate typing.Union

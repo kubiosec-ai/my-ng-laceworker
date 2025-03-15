@@ -1,0 +1,8 @@
+2025-03-15 14:05:56,959 - INFO - Using vector store with ID: vs_67d56a3b04308191870e3b04a5813401
+2025-03-15 14:05:56,959 - INFO - Running agent with OpenAI Agents SDK for task: List all Lacework agents and show their status
+2025-03-15 14:05:56,959 - INFO - Searching for relevant information for task: List all Lacework agents and show their status
+2025-03-15 14:05:56,959 - INFO - Searching vector store for: List all Lacework agents and show their status
+2025-03-15 14:06:02,135 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-03-15 14:06:02,157 - INFO - Vector search found: To list all Lacework agents and show their status, you can use the following command in the Lacework...
+2025-03-15 14:06:03,637 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
+2025-03-15 14:06:04,604 - INFO - HTTP Request: POST https://api.openai.com/v1/traces/ingest "HTTP/1.1 204 No Content"
