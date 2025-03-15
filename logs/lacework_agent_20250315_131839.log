@@ -1,3 +1,0 @@
-2025-03-15 13:18:39,560 - INFO - Using vector store with ID: vs_67d56a3b04308191870e3b04a5813401
-2025-03-15 13:18:39,560 - INFO - Sending prompt to OpenAI: How do I list all cloud accounts for AWS
-2025-03-15 13:18:43,219 - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 200 OK"
