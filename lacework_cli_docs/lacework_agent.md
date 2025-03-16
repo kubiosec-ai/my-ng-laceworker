@@ -1,4 +1,4 @@
-# `lacework agent https://docs.lacework.com/supported-operating-systems`
+# `lacework agent`
 
 ```
 Manage agents and agent access tokens in your account.

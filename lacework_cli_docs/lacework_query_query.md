@@ -1,4 +1,4 @@
-# `lacework query query,`
+# `lacework query query`
 
 ```
 Run and manage Lacework Query Language (LQL) queries.

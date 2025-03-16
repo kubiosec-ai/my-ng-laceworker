@@ -1,4 +1,4 @@
-# `lacework generate generate,`
+# `lacework generate generate`
 
 ```
 Generate code to onboard your account and deploy Lacework into various cloud environments.

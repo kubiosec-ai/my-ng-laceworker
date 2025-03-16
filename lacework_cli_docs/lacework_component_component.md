@@ -1,4 +1,4 @@
-# `lacework component component,`
+# `lacework component component`
 
 ```
 Manage components to extend your experience with the Lacework platform

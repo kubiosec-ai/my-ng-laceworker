@@ -1,4 +1,4 @@
-# `lacework alert lacework`
+# `lacework alert`
 
 ```
 Inspect and manage alerts.

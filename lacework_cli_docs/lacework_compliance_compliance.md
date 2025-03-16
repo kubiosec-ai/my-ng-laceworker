@@ -1,4 +1,4 @@
-# `lacework compliance compliance,`
+# `lacework compliance compliance`
 
 ```
 Manage compliance reports for Google, Azure, or AWS cloud providers.

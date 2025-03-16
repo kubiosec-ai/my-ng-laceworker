@@ -1,4 +1,4 @@
-# `lacework alert-channel alert-channel,`
+# `lacework alert-channel`
 
 ```
 Manage alert channels integrations with Lacework

@@ -1,4 +1,4 @@
-# `lacework policy lacework`
+# `lacework policy`
 
 ```
 Manage policies in your Lacework account.

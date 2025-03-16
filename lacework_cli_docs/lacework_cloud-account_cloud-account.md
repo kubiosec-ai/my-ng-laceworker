@@ -1,4 +1,4 @@
-# `lacework cloud-account cloud-account,`
+# `lacework cloud-account cloud-account`
 
 ```
 Manage cloud account integrations with Lacework

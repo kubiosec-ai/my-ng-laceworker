@@ -1,4 +1,4 @@
-# `lacework alert-rule alert-rule,`
+# `lacework alert-rule`
 
 ```
 Manage alert rules to route events to the appropriate people or tools.

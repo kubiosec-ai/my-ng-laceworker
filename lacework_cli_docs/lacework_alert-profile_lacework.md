@@ -1,4 +1,4 @@
-# `lacework alert-profile lacework`
+# `lacework alert-profile`
 
 ```
 Manage alert profiles to define how your LQL queries get consumed into alerts.

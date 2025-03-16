@@ -1,4 +1,4 @@
-# `lacework container-registry container-registry,`
+# `lacework container-registry`
 
 ```
 Manage container registry integrations with Lacework

@@ -1,4 +1,4 @@
-# `lacework policy-exception policy-exception,`
+# `lacework policy-exception`
 
 ```
 Manage policy exceptions in your Lacework account.

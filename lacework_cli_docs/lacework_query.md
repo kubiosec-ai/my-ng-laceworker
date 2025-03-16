@@ -1,5 +1,6 @@
-# `lacework query https://docs.lacework.com/lql-overview`
+# `lacework query`
 
+https://docs.lacework.com/lql-overview
 ```
 Run and manage Lacework Query Language (LQL) queries.
 
