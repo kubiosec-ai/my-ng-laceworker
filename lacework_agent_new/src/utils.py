@@ -6,7 +6,7 @@ Provides utility functions for the agent.
 import os
 import json
 import logging
-from datetime import datetime
+from datetime import datetime, timezone
 
 # Tracing configuration
 TRACE_DIR = "traces"
@@ -113,6 +113,15 @@ def setup_logging(log_dir="logs"):
     
     logging.info(f"Logging initialized. Log file: {log_filename}")
     return log_filename
+
+def get_utc_timestamp():
+    """
+    Get the current UTC time in ISO 8601 format with millisecond precision.
+    
+    Returns:
+        str: Current UTC timestamp in format 'YYYY-MM-DDThh:mm:ss.sssZ'
+    """
+    return datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%S.%f')[:-3] + 'Z'
 
 def check_openai_api_key():
     """

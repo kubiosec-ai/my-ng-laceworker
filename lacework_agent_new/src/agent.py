@@ -12,7 +12,7 @@ from dotenv import load_dotenv
 from openai import OpenAI
 
 from .config import load_config
-from .utils import save_trace, vector_search
+from .utils import save_trace, vector_search, get_utc_timestamp
 
 # Check if OpenAI Agents SDK is available
 try:
@@ -63,10 +63,13 @@ def ask_prompt(prompt):
         logging.info(f"Sending prompt to OpenAI: {prompt}")
         print("\nSending prompt to OpenAI...\n")
         
+        # Get current timestamp
+        current_time = get_utc_timestamp()
+        
         # Create a response
         response = client.responses.create(
             model="gpt-4o",
-            input=prompt,
+            input=f"The current date and time is {current_time}\n\nWhen referring to dates and times, always use the ISO 8601 format with millisecond precision (YYYY-MM-DDThh:mm:ss.sssZ) as shown in the timestamp above.\n\n{prompt}",
             tools=[{
                 "type": "file_search",
                 "vector_store_ids": [vector_store_id]
@@ -170,10 +173,13 @@ def run_agent(task, send_to_openai=False):
         # Record step start
         step1_start = datetime.now().isoformat()
         
+        # Get current timestamp for the first call
+        current_time_step1 = get_utc_timestamp()
+        
         # Get relevant information using the vector store
         relevant_info_response = client.responses.create(
             model="gpt-4o",
-            input=f"Find information relevant to this task: {task}. Return only the most relevant information from the Lacework CLI documentation.",
+            input=f"The current date and time is {current_time_step1}\n\nWhen referring to dates and times, always use the ISO 8601 format with millisecond precision (YYYY-MM-DDThh:mm:ss.sssZ) as shown in the timestamp above.\n\nFind information relevant to this task: {task}. Return only the most relevant information from the Lacework CLI documentation.",
             tools=[{
                 "type": "file_search",
                 "vector_store_ids": [vector_store_id]
@@ -215,13 +221,18 @@ def run_agent(task, send_to_openai=False):
         # Record step start
         step2_start = datetime.now().isoformat()
         
+        # Get current timestamp
+        current_time = get_utc_timestamp()
+        
         # Generate bash commands using the relevant information
         command_response = client.chat.completions.create(
             model="gpt-4o",
             messages=[
                 {
                     "role": "system",
-                    "content": "You are a Lacework CLI expert. Your task is to generate bash commands to solve the user's task. "
+                    "content": f"The current date and time is {current_time}\n\n"
+                               "When referring to dates and times, always use the ISO 8601 format with millisecond precision (YYYY-MM-DDThh:mm:ss.sssZ) as shown in the timestamp above.\n\n"
+                               "You are a Lacework CLI expert. Your task is to generate bash commands to solve the user's task. "
                                "Use the provided documentation information to inform your commands. "
                                "Format your response as a series of bash commands with comments explaining each step. "
                                "If you need to use variables, explain how to set them. "
@@ -359,10 +370,17 @@ async def run_agent_with_sdk(task):
         # Get relevant information using the vector store
         relevant_info = vector_search(client, vector_store_id, task)
         
+        # Get current timestamp
+        current_time = get_utc_timestamp()
+        
         # Define the agent with instructions that include the relevant information
         agent = OpenAIAgent(
             name="LaceworkAgent",
-            instructions=f"""You are a Lacework CLI expert. Your task is to generate bash commands to solve the user's task.
+            instructions=f"""The current date and time is {current_time}
+
+When referring to dates and times, always use the ISO 8601 format with millisecond precision (YYYY-MM-DDThh:mm:ss.sssZ) as shown in the timestamp above.
+
+You are a Lacework CLI expert. Your task is to generate bash commands to solve the user's task.
 
 Here is relevant information from the Lacework CLI documentation:
 
