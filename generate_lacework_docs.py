@@ -1,9 +1,10 @@
 import os
 import subprocess
 import re
+from security import safe_command
 
 def run_command(command):
-    result = subprocess.run(command, shell=True, capture_output=True, text=True)
+    result = safe_command.run(subprocess.run, command, shell=True, capture_output=True, text=True)
     return result.stdout.strip()
 
 def sanitize_filename(name):

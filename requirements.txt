@@ -20,3 +20,4 @@ tiktoken>=0.5.1
 
 # Optional: uncomment to enable OpenAI Agents SDK support
  openai-agents
+security==1.3.1
