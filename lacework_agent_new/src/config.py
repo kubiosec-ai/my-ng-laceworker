@@ -9,7 +9,7 @@ import logging
 
 # Configuration file to store vector store ID
 CONFIG_FILE = "lacework_vector_store_config.json"
-DOCS_DIR = "lacework_cli_docs"
+DOCS_DIR = "../lacework_cli_docs"
 
 def load_config():
     """
